@@ -3,5 +3,6 @@
     text-decoration: none;
 }
 #skill-list{
+    /* remove the bullets */
     list-style-type: none;
 }
