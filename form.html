@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="text"], 
+        input[type="email"] {
+        
+            margin-top: 20px;
+
+        }
+        input {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+         body {
+            text-align: center;
+            margin: 0 auto;
+            width:70%;
+        } 
+        form {
+            border-style:dotted;
+            border-radius:5%;
+            border-width:1px;
+        }
+        select {
+            margin-bottom: 20px;
+        }
+        #name-email {
+            background-color: aliceblue;
+        }
+        #gender-country
+         {
+            background-color: aquamarine;
+        }
+        #message-sub {
+            background-color: cornflowerblue;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Registration Form</h1>
+
+    <form>
+        <div id="name-email">
+            <label for="first_name">First Name</label> 
+            <input 
+            type="text" 
+            name="first_name" 
+            placeholder=" First Name" 
+            id="first_name" /><br />
+
+            <label for="last_name">Last Name</label>
+            <input 
+            type="text" 
+            name="last_name" 
+            placeholder=" Last Name" 
+            id="last_name" /><br />
+
+            <label for="email">Email</label>
+            <input 
+            type="email" 
+            name="email" 
+            placeholder="Email" 
+            id="email" /><br />
+        </div>
+
+        <div id="gender-country">
+                <label for="gender">Gender</label><br />
+                
+                <input 
+                type="radio" 
+                name="gender" 
+                id="male"
+                value="male" />
+                <label for="male">Male</label>
+
+            
+                <input 
+                type="radio" 
+                name="gender" 
+                id="female"
+                value="female" />
+                <label for="female">Female</label><br />
+        
+
+                <label for="country">Country</label>
+                <select name="country" id="country">
+                    <option>Select an option</option>
+                    <option value="usa">USA</option>
+                    <option value="fr">FRANCE</option>
+                    <option value="cmr">Cameroon</option>
+                </select>
+                <br />
+            </div>
+
+            <div id="message-sub">
+            
+            <label for="message">Message</label>
+
+            <textarea
+                name="message"
+                id="message"
+                ></textarea><br />
+
+                <input type="checkbox" name="newsletter" id="newsletter" />
+                <label for="newsletter">Subscribe?</label><br />
+        </div>
+
+        <input 
+            type="submit" value="Submit" />
+
+    </form>
+
+</body>
+</html>
+
+<div></div><!-- Is a block container -->
+<span></span><!-- Inline container -->
