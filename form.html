@@ -90,12 +90,22 @@
             
         }
         input[type='submit'] {
+            border-radius: 10px;
             border: none;
             color: white;
             padding: 16px 32px;
-            background-image: linear-gradient(to right, green, #78b578);
+            background-image: linear-gradient(to right, rgb(114, 180, 114), #8eb98e);
             cursor: pointer;
            transition: font-size 1s;
+        }
+        .submit-disabled {
+            cursor: not-allowed;
+            pointer-events: none;
+            background-image: linear-gradient(to right, rgb(156, 194, 156), #9daa9d);
+        }
+        #text-count {
+            color: red;
+            margin-left: 35%;
         }
 
     </style>
@@ -111,6 +121,7 @@
             type="text" 
             name="first_name" 
             placeholder=" First Name" 
+            onkeyup="activateSubmit()"
             id="first_name" /><br />
 
             <label for="last_name">Last Name</label>
@@ -118,6 +129,7 @@
             type="text" 
             name="last_name" 
             placeholder=" Last Name" 
+            onkeyup="activateSubmit()"
             id="last_name" /><br />
 
             <label for="email">Email</label>
@@ -125,6 +137,7 @@
             type="email" 
             name="email" 
             placeholder="Email" 
+            onkeyup="activateSubmit()"
             id="email" /><br />
         </div>
 
@@ -166,15 +179,19 @@
                 name="message"
                 id="message"
                 rows="10"
+                onkeyup="countText()"
                 ></textarea><br />
+                <p id="text-count">0/100</p>
 
                 <input type="checkbox" name="newsletter" id="newsletter" />
                 <label for="newsletter">Subscribe?</label><br />
         </div>
 
         <div id="sub-but">
-        <input 
-            type="submit" value="Submit" />
+        <input class="submit-disabled" 
+            id="submit"
+            type="submit" 
+            value="Submit" />
         </div>
 
     </form>
