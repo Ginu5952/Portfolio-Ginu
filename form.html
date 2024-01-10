@@ -11,6 +11,12 @@
             margin-top: 20px;
 
         }
+        h1 {
+            font-style: italic;
+            color: aqua;
+            text-shadow: 2px 2px 4px #FF0000;
+           
+        }
         input {
             margin-top: 30px;
             margin-bottom: 30px;
@@ -21,7 +27,7 @@
             width:70%;
         } 
         form {
-            border-style:dotted;
+            border-style:solid;
             border-radius:5%;
             border-width:1px;
         }
@@ -30,14 +36,26 @@
         }
         #name-email {
             background-color: aliceblue;
+            color: green;
+            text-shadow: 2px 2px 4px #FF0000;
         }
         #gender-country
          {
-            background-color: aquamarine;
+            background-color: aliceblue;
+            
+            
         }
         #message-sub {
-            background-color: cornflowerblue;
+            background-color: aliceblue;
+            color: green;
+            text-shadow: 2px 2px 4px #FF0000;
         }
+        #submit-but {
+            background-color: aliceblue;
+            color: green;
+            text-shadow: 2px 2px 4px #FF0000;
+        }
+        
 
     </style>
 </head>
@@ -45,7 +63,7 @@
     
     <h1>Registration Form</h1>
 
-    <form>
+    <form name="registration" onsubmit="return validation()">
         <div id="name-email">
             <label for="first_name">First Name</label> 
             <input 
@@ -111,13 +129,16 @@
                 <label for="newsletter">Subscribe?</label><br />
         </div>
 
+        <div id="submit-but">
         <input 
             type="submit" value="Submit" />
+        </div>
 
     </form>
-
+ <script type="text/javascript" src="assets/js/form.js"></script>
 </body>
 </html>
 
 <div></div><!-- Is a block container -->
+
 <span></span><!-- Inline container -->
