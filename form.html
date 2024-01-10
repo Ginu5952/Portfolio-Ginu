@@ -9,7 +9,22 @@
         input[type="email"] {
         
             margin-top: 20px;
+            transition: background-color 2s;
 
+        }
+        textarea{
+            width:30%;
+            animation-name: text-area;
+            animation-duration: 4s;
+            transition: background-color 2s;
+        }
+        @keyframes text-area {
+            from {
+                width: 5%;
+            }
+            to {
+                width: 30%;
+            }
         }
         h1 {
             font-style: italic;
@@ -41,21 +56,47 @@
         }
         #gender-country
          {
-            background-color: aliceblue;
-            
+            background-image: linear-gradient(to right, aliceblue,rgb(100, 110, 119) );
+            margin-bottom: 2px;
             
         }
         #message-sub {
             background-color: aliceblue;
-            color: green;
-            text-shadow: 2px 2px 4px #FF0000;
+            
         }
-        #submit-but {
+        #sub-but {
             background-color: aliceblue;
-            color: green;
-            text-shadow: 2px 2px 4px #FF0000;
         }
-        
+        input[type='text']:hover, 
+        input[type='email']:hover,
+        textarea:hover {
+            /* css goes here */
+            background-color: rgb(49, 54, 54);
+        }
+        input[type='submit']:hover{
+            font-size: large;
+           
+        }
+
+        input[type='text']:focus, 
+        input[type='email']:focus,
+        textarea:focus {
+            /* css goes here */
+            background-color: rgb(174, 251, 251);
+        }
+
+        input[type='submit']:active {
+            font-size: xx-small;
+            
+        }
+        input[type='submit'] {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            background-image: linear-gradient(to right, green, #78b578);
+            cursor: pointer;
+           transition: font-size 1s;
+        }
 
     </style>
 </head>
@@ -114,22 +155,24 @@
                     <option value="cmr">Cameroon</option>
                 </select>
                 <br />
+                
             </div>
 
             <div id="message-sub">
             
             <label for="message">Message</label>
 
-            <textarea
+            <textarea 
                 name="message"
                 id="message"
+                rows="10"
                 ></textarea><br />
 
                 <input type="checkbox" name="newsletter" id="newsletter" />
                 <label for="newsletter">Subscribe?</label><br />
         </div>
 
-        <div id="submit-but">
+        <div id="sub-but">
         <input 
             type="submit" value="Submit" />
         </div>
